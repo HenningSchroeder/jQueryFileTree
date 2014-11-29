@@ -7,6 +7,10 @@ UL.jqueryFileTree {
 	display: none;
 }
 
+UL.jqueryFileTree LI.hidden {
+	display: none;
+}
+
 UL.jqueryFileTree LI {
 	list-style: none;
 	padding: 0px;
