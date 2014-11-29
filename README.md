@@ -53,6 +53,8 @@ Parameters are passed as an object to the fileTree()function. Valid options incl
 	<tr> <td>multiFolder</td> <td>Whether or not to limit the browser to one subfolder at a time</td> <td>true</td> </tr>
 	<tr> <td>loadMessage</td> <td>Message to display while initial tree loads (can be HTML)</td> <td>"Loading..."</td> </tr>
 	<tr> <td>multiSelect</td> <td>Append checkbox to each line item to select more than one</td> <td>false</td> </tr>
+	<tr> <td>folderSelect</td> <td>Will only display folder structure, no files</td> <td>false</td> </tr>
+	<tr> <td>exclude</td> <td>Value should be an array of strings. Strings starting with '*.' exclude by file extension. All other strings exclude matches by name for files or folders.</td> <td>[]</td> </tr>
 
 </table>
 
@@ -64,7 +66,8 @@ There are many options available, which would look something like this:
 			script: 'jqueryFileTree.php',
 			expandSpeed: 1000,
 			collapseSpeed: 1000,
-			multiFolder: false
+			multiFolder: false.
+			exclude: ['*.xml', 'system', 'settings.conf']
 		}, function(file) {
 			alert(file);
 		});
